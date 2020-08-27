@@ -23,6 +23,7 @@
 		D2A5F2091F4A9144005CD714 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2A5F2071F4A9144005CD714 /* Main.storyboard */; };
 		D2A5F20B1F4A9144005CD714 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2A5F20A1F4A9144005CD714 /* Assets.xcassets */; };
 		D2A5F2211F4A96D0005CD714 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A5F2201F4A96D0005CD714 /* AppDelegate.swift */; };
+		D700939424F7EDAF00BE3919 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D700939324F7EDAF00BE3919 /* README.md */; };
 		F55277D22334FB42002ABD09 /* VineData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55277D12334FB42002ABD09 /* VineData.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		D2A5F20A1F4A9144005CD714 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D2A5F20F1F4A9144005CD714 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2A5F2201F4A96D0005CD714 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D700939324F7EDAF00BE3919 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F55277D12334FB42002ABD09 /* VineData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VineData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -125,6 +127,7 @@
 			children = (
 				D2A5F2021F4A9144005CD714 /* SnipTheVine */,
 				D2A5F2011F4A9144005CD714 /* Products */,
+				D700939324F7EDAF00BE3919 /* README.md */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 				AFEF9627231A1E86006025E5 /* Splash.caf in Resources */,
 				5394F02521864DF5006E754C /* LaunchScreen.storyboard in Resources */,
 				D2A5F20B1F4A9144005CD714 /* Assets.xcassets in Resources */,
+				D700939424F7EDAF00BE3919 /* README.md in Resources */,
 				AFEF9618231A0225006025E5 /* VineData.plist in Resources */,
 				AFEF9612231A01CD006025E5 /* Particle@2x.png in Resources */,
 				D2A5F2091F4A9144005CD714 /* Main.storyboard in Resources */,
