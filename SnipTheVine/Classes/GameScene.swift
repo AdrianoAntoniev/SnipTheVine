@@ -46,7 +46,10 @@ class GameScene: SKScene {
   //MARK: - Level setup
   
   private func setUpPhysics() {
-    
+    physicsWorld.contactDelegate = self
+    physicsWorld.gravity = CGVector(dx: 0.0, dy: -9.8)
+    physicsWorld.speed = 1.0
+
   }
   
   private func setUpScenery() {
@@ -66,13 +69,48 @@ class GameScene: SKScene {
   }
   
   private func setUpPrize() {
-    
+    prize = SKSpriteNode(imageNamed: ImageName.prize)
+    prize.position = CGPoint(x: size.width * 0.5, y: size.height * 0.7)
+    prize.zPosition = Layer.prize
+    prize.physicsBody = SKPhysicsBody(circleOfRadius: prize.size.height / 2)
+    prize.physicsBody?.categoryBitMask = PhysicsCategory.prize
+    prize.physicsBody?.collisionBitMask = 0
+    prize.physicsBody?.density = 0.5
+
+    addChild(prize)
+
   }
   
   //MARK: - Vine methods
   
   private func setUpVines() {
-    
+    let decoder = PropertyListDecoder()
+    guard
+      let dataFile = Bundle.main.url(
+        forResource: GameConfiguration.vineDataFile,
+        withExtension: nil),
+      let data = try? Data(contentsOf: dataFile),
+      let vines = try? decoder.decode([VineData].self, from: data)
+      else {
+        return
+    }
+    // 1 add vines
+    for (i, vineData) in vines.enumerated() {
+      let anchorPoint = CGPoint(
+        x: vineData.relAnchorPoint.x * size.width,
+        y: vineData.relAnchorPoint.y * size.height)
+      let vine = VineNode(
+        length: vineData.length,
+        anchorPoint: anchorPoint,
+        name: "\(i)")
+
+      // 2 add to scene
+      vine.addToScene(self)
+
+      // 3 connect the other end of the vine to the prize
+      vine.attachToPrize(prize)
+    }
+
   }
   
   //MARK: - Croc methods
